@@ -359,6 +359,19 @@ sub Round {
 
 
 #********************************************
+# @desc this keeps on adding nubers untir destroyed
+# @arg  base nuber
+#********************************************
+sub count_up_down {
+    my ($number) = @_;
+    return {
+        increment   => sub { return ++$number },   
+        decrement   => sub { return --$number },   
+    }; 
+}
+
+
+#********************************************
 # メルアドチェック
 #********************************************
 sub Looks_Like_Email {
