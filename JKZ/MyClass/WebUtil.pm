@@ -1,68 +1,71 @@
 #********************************************
-# * @desc        •¶š—ñ‘€ì‚â•ÏŠ·‚»‚Ì‚½ƒƒ‹ƒAƒhƒ`ƒFƒbƒN‚âŠÔæ“¾“™‚Ìƒc[ƒ‹ŒQ
-# * @desc        ‹Œƒo[ƒWƒ‡ƒ“‚ÌWebUtil‚ğ—˜—p‚µ‚Ä‚éƒNƒ‰ƒX(JKZHPEdit‚È‚Ç)‚ª‘¶İ‚·‚é‚½‚ßƒo[ƒWƒ‡ƒ“ƒAƒbƒv‚Å‚Í‚È‚­Aƒ‚ƒWƒ…[ƒ‹–¼‚ğ•ÏX‚µ‚Ä‘Î‰
+# * @desc        æ–‡å­—åˆ—æ“ä½œã‚„å¤‰æ›ãã®ãŸãƒ¡ãƒ«ã‚¢ãƒ‰ãƒã‚§ãƒƒã‚¯ã‚„æ™‚é–“å–å¾—ç­‰ã®ãƒ„ãƒ¼ãƒ«ç¾¤
+# * @desc        æ—§ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®WebUtilã‚’åˆ©ç”¨ã—ã¦ã‚‹ã‚¯ãƒ©ã‚¹(JKZHPEditãªã©)ãŒå­˜åœ¨ã™ã‚‹ãŸã‚ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ã§ã¯ãªãã€ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«åã‚’å¤‰æ›´ã—ã¦å¯¾å¿œ
 # * @package    MyClass::WebUtil
 # * @access     public
 # * @author     RyoIwahase
 # * @create    
 # * @version    1.2
-# * @update        2006/12/15 mbconvertZ2HKana‚ğ’Ç‰Á
-# * @update        2006/12/15 mbconvertH2ZKana‚ğ’Ç‰Á
-# * @update        2006/12/15 mbconvertZ2H‚ğ’Ç‰Á
-# * @update        2006/12/15 mbconvertH2Z‚ğ’Ç‰Á
-# * @update        2006/12/15 POSIX‚Ìstrftime‚¾‚¯‚ğƒCƒ“ƒ|[ƒg‚É•ÏX
-# * @update        2007/02/20 getCookies‚ğ’Ç‰Á
-# * @update        2007/03/31 ƒ[ƒ‹ƒAƒhƒŒƒX‚ÌƒhƒƒCƒ“‚©‚çƒLƒƒƒŠƒA”š‚ğ•Ô‚·
-# * @update        2007/05/04 createHash‚ğ’Ç‰Á(ˆø”‚ğMD5‚ÅŒvZ‚µ‚Äw’è‚µ‚½•¶š”‚ÉØ‚èÌ‚Ä‚é
-# * @update        2008/02/07 Œg‘Ñ¯•Ê”Ô†getMobileSubscribeNumber
-# * @update        2008/03/24 Œg‘Ñ“d˜b‚ÌƒLƒƒƒŠƒAƒR[ƒh
-# * @update        2008/03/26 Œg‘Ñ¯•Ê”Ô†getMobileSubscribeNumber‚Ìˆ—‚ğ•ÏX
-# * @update        2008/03/27 GetTime‚ÉƒtƒH[ƒ}ƒbƒg’Ç‰Á
-# * @update        2008/03/27 caluculateAge‚ğ’Ç‰Á
-# * @update        2008/04/07 warnMSG_LINE‚ğ’Ç‰Á
-# * @update        2008/05/02 checkSanitize’Ç‰Á
+# * @update        2006/12/15 mbconvertZ2HKanaã‚’è¿½åŠ 
+# * @update        2006/12/15 mbconvertH2ZKanaã‚’è¿½åŠ 
+# * @update        2006/12/15 mbconvertZ2Hã‚’è¿½åŠ 
+# * @update        2006/12/15 mbconvertH2Zã‚’è¿½åŠ 
+# * @update        2006/12/15 POSIXã®strftimeã ã‘ã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã«å¤‰æ›´
+# * @update        2007/02/20 getCookiesã‚’è¿½åŠ 
+# * @update        2007/03/31 ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã®ãƒ‰ãƒ¡ã‚¤ãƒ³ã‹ã‚‰ã‚­ãƒ£ãƒªã‚¢æ•°å­—ã‚’è¿”ã™
+# * @update        2007/05/04 createHashã‚’è¿½åŠ (å¼•æ•°ã‚’MD5ã§è¨ˆç®—ã—ã¦æŒ‡å®šã—ãŸæ–‡å­—æ•°ã«åˆ‡ã‚Šæ¨ã¦ã‚‹
+# * @update        2008/02/07 æºå¸¯è­˜åˆ¥ç•ªå·getMobileSubscribeNumber
+# * @update        2008/03/24 æºå¸¯é›»è©±ã®ã‚­ãƒ£ãƒªã‚¢ã‚³ãƒ¼ãƒ‰
+# * @update        2008/03/26 æºå¸¯è­˜åˆ¥ç•ªå·getMobileSubscribeNumberã®å‡¦ç†ã‚’å¤‰æ›´
+# * @update        2008/03/27 GetTimeã«ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆè¿½åŠ 
+# * @update        2008/03/27 caluculateAgeã‚’è¿½åŠ 
+# * @update        2008/04/07 warnMSG_LINEã‚’è¿½åŠ 
+# * @update        2008/05/02 checkSanitizeè¿½åŠ 
 # * @update        2008/05/29 escapeTags
 # * @update        2008/06/04 unescapeTags
 # * @update        2008/08/27 convertMBStrings2Hex 
-#                “ú–{Œê•¶š—ñ‚ğ16i”•ÏŠ·
+#                æ—¥æœ¬èªæ–‡å­—åˆ—ã‚’16é€²æ•°å¤‰æ›
 #                convertHex2MBStrings
-#                16i”‚ğ“ú–{Œê•¶š—ñ‚É–ß‚·
-# * @update        2008/10/27 convertSZSpace2C sjis‘SŠpƒXƒy[ƒX‚ğ”¼ŠpƒJƒ“ƒ}‚É•ÏŠ·
-# * @update        2008/12/04 convertImageSize‚ğ’Ç‰Á
-# * @update        2009/01/23 getMobileGUID‚ğ’Ç‰Á
-# * @update        2009/01/28 getCarrierByEMail getCarrierCode getMobileSubscribeNumber getMobileGUID ‚ğJKZ::JKZMoblile‚ÉˆÚ“®
-# * @update        2009/02/18 •¶š—ñ‘€ìŠÖ˜AƒTƒuƒ‹[ƒeƒBƒ“–¼‚ğC³ 
-# * @update        2009/02/18 “ú•tƒtƒH[ƒ}ƒbƒg‚ğ®‚¦‚éƒTƒuƒ‹[ƒeƒBƒ“’Ç‰Á
-# * @update        2009/02/19 ƒ‚ƒWƒ…[ƒ‹‚ÌƒRƒ“ƒpƒCƒ‹‚ğ•K—v‚È‚Æ‚«‚¾‚¯‚Ìrequire‚É•ÏX“Ç‚İ‚İ
-# * @update        2009/03/06 figContentType‚ğ’Ç‰ÁcƒRƒ“ƒeƒ“ƒcƒ^ƒCƒv
-# * @update        2009/03/06 publishObj’Ç‰ÁB
-# * @update        2009/03/12 clearObj’Ç‰ÁB
-# * @update        2009/07/07 warnTreeLayOut’Ç‰Á
-# * @update        2009/07/28 createDir‚ğ’Ç‰Á
-# * @update        2009/08/03 convertImageSize‚ğ”rœ
-# * @update        2009/08/03 convertByNKF‚ğ’Ç‰Á
-# * @update        2009/09/07 calculateAge‚ÉŒE“úƒ`ƒFƒbƒNˆ—’Ç‰Á
-# * @update        2009/09/08 GetTime‚ÉƒIƒvƒVƒ‡ƒ“‚ğ’Ç‰Á 13-17
-# * @update        2009/09/46 WebUtil::encryptBlowFish WebUtil::decryptBlowFish‚ğ’Ç‰Á
+#                16é€²æ•°ã‚’æ—¥æœ¬èªæ–‡å­—åˆ—ã«æˆ»ã™
+# * @update        2008/10/27 convertSZSpace2C sjiså…¨è§’ã‚¹ãƒšãƒ¼ã‚¹ã‚’åŠè§’ã‚«ãƒ³ãƒã«å¤‰æ›
+# * @update        2008/12/04 convertImageSizeã‚’è¿½åŠ 
+# * @update        2009/01/23 getMobileGUIDã‚’è¿½åŠ 
+# * @update        2009/01/28 getCarrierByEMail getCarrierCode getMobileSubscribeNumber getMobileGUID ã‚’JKZ::JKZMoblileã«ç§»å‹•
+# * @update        2009/02/18 æ–‡å­—åˆ—æ“ä½œé–¢é€£ã‚µãƒ–ãƒ«ãƒ¼ãƒ†ã‚£ãƒ³åã‚’ä¿®æ­£ 
+# * @update        2009/02/18 æ—¥ä»˜ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã‚’æ•´ãˆã‚‹ã‚µãƒ–ãƒ«ãƒ¼ãƒ†ã‚£ãƒ³è¿½åŠ 
+# * @update        2009/02/19 ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚’å¿…è¦ãªã¨ãã ã‘ã®requireã«å¤‰æ›´èª­ã¿è¾¼ã¿
+# * @update        2009/03/06 figContentTypeã‚’è¿½åŠ â€¦ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚¿ã‚¤ãƒ—
+# * @update        2009/03/06 publishObjè¿½åŠ ã€‚
+# * @update        2009/03/12 clearObjè¿½åŠ ã€‚
+# * @update        2009/07/07 warnTreeLayOutè¿½åŠ 
+# * @update        2009/07/28 createDirã‚’è¿½åŠ 
+# * @update        2009/08/03 convertImageSizeã‚’æ’é™¤
+# * @update        2009/08/03 convertByNKFã‚’è¿½åŠ 
+# * @update        2009/09/07 calculateAgeã«æœˆãƒ»æ—¥ãƒã‚§ãƒƒã‚¯å‡¦ç†è¿½åŠ 
+# * @update        2009/09/08 GetTimeã«ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’è¿½åŠ  13-17
+# * @update        2009/09/46 WebUtil::encryptBlowFish WebUtil::decryptBlowFishã‚’è¿½åŠ 
+# * @update        2010/06/14 cipher decipheré–¢æ•°ã‚’è¿½åŠ 
+# * @update        2010/10/27 convertByNKFæ–‡å­—ã‚³ãƒ¼ãƒ‰å‡¦ç†ã‚’é…åˆ—ã«å¯¾å¿œ
+# * @update        2010/12/10 subtractDateTimeAFromDateTimeBé–¢æ•°è¿½åŠ 
+# * @update        2011/10/31 encodeUriã¨decodeUrié–¢æ•°ã®è¿½åŠ 
 #********************************************
 package MyClass::WebUtil;
 
 use strict;
 our $VERSION = '1.2';
 
-use POSIX qw(strftime);
+use POSIX qw(strftime mktime);
 use Unicode::Japanese;
 use Unicode::Japanese qw(unijp);
 use NKF;
 
 
-
 #////////////////////////////////////////////
-# •¶š—ñˆ—ŠÖŒW
+# æ–‡å­—åˆ—å‡¦ç†é–¢ä¿‚
 #////////////////////////////////////////////
 
 #********************************************
-# ƒTƒjƒ^ƒCƒY
+# ã‚µãƒ‹ã‚¿ã‚¤ã‚º
 #********************************************
 sub checkSanitize {
     my $str = shift;
@@ -73,7 +76,31 @@ sub checkSanitize {
 
 
 #********************************************
-# ŠÈ’P‚Èescape
+# URIã‚’ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‰ã™ã‚‹
+#********************************************
+sub encodeUri {
+    my $str = shift;
+    $str    =~ s/([^\w ])/'%' . unpack('H2', $1)/eg;
+    $str    =~ tr/ /+/;
+
+    return $str;
+}
+
+
+#********************************************
+# URIã‚’ãƒ‡ã‚³ãƒ¼ãƒ‰ã™ã‚‹
+#********************************************
+sub decodeUri {
+    my $str = shift;
+    $str    =~ tr/+/ /;
+    $str    =~ s/%([0-9A-Fa-f][0-9A-Fa-f])/pack('H2', $1)/eg;
+
+    return $str;
+}
+
+
+#********************************************
+# ç°¡å˜ãªescape
 # < > & " ==> &lt; &gt; &amp; &quot;
 #********************************************
 sub escapeTags {
@@ -88,7 +115,7 @@ sub escapeTags {
 
 
 #********************************************
-# ŠÈ’P‚Èescape‚³‚ê‚½•¶š‚ğunescape
+# ç°¡å˜ãªescapeã•ã‚ŒãŸæ–‡å­—ã‚’unescape
 # &lt; &gt; &amp; &quot; ==>  < > & "
 #********************************************
 sub unescapeTags {
@@ -103,7 +130,7 @@ sub unescapeTags {
 
 
 #********************************************
-# ‰üsƒR[ƒh‚ğhtml‚Ì‰üsƒ^ƒO‚É•ÏŠ·
+# æ”¹è¡Œã‚³ãƒ¼ãƒ‰ã‚’htmlã®æ”¹è¡Œã‚¿ã‚°ã«å¤‰æ›
 #********************************************
 sub yenRyenN2br {
     my $str = shift;
@@ -114,7 +141,7 @@ sub yenRyenN2br {
 
 
 #********************************************
-# html‚Ì‰üsƒ^ƒO‚ğ‰üsƒR[ƒh‚É•ÏŠ·
+# htmlã®æ”¹è¡Œã‚¿ã‚°ã‚’æ”¹è¡Œã‚³ãƒ¼ãƒ‰ã«å¤‰æ›
 #********************************************
 sub br2yenRyenN {
     my $str = shift;
@@ -125,7 +152,7 @@ sub br2yenRyenN {
 
 
 #********************************************
-# html‚Ì‰üsƒ^ƒO‚ğ‰üsƒR[ƒh‚É•ÏŠ·(’¼‘O‚ªÀ¸Ş‚Å‚Í‚È‚¢ê‡)
+# htmlã®æ”¹è¡Œã‚¿ã‚°ã‚’æ”¹è¡Œã‚³ãƒ¼ãƒ‰ã«å¤‰æ›(ç›´å‰ãŒï¾€ï½¸ï¾ã§ã¯ãªã„å ´åˆ)
 #********************************************
 sub yenRyenN2brAfterNoTags { 
     my $str = shift;
@@ -136,7 +163,7 @@ sub yenRyenN2brAfterNoTags {
 
 
 #********************************************
-# html‚Æhead‚È‚¢‚ÌÀ¸Ş‚ğƒGƒXƒP[ƒv
+# htmlã¨headãªã„ã®ï¾€ï½¸ï¾ã‚’ã‚¨ã‚¹ã‚±ãƒ¼ãƒ—
 #********************************************
 sub escapeHeaderTags {
     my $str = shift;
@@ -164,7 +191,7 @@ sub escapeHeaderTags {
 
 
 #********************************************
-# ƒXƒy[ƒX‚ğíœ
+# ã‚¹ãƒšãƒ¼ã‚¹ã‚’å‰Šé™¤
 #********************************************
 sub trimSpace {
     my $str = shift;
@@ -177,7 +204,7 @@ sub trimSpace {
 
 
 #********************************************
-# ”š‚ÉƒtƒH[ƒ}ƒbƒg‚·‚é
+# æ•°å­—ã«ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã™ã‚‹
 #********************************************
 sub formatToNumber {
     my $str = shift;
@@ -189,7 +216,7 @@ sub formatToNumber {
 
 
 #********************************************
-# ƒAƒ‹ƒtƒ@ƒxƒbƒg‚ÉƒtƒH[ƒ}ƒbƒg‚·‚é
+# ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã«ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã™ã‚‹
 #********************************************
 sub formatToAlphabet {
     my $str = shift;
@@ -201,7 +228,7 @@ sub formatToAlphabet {
 
 
 #********************************************
-# ‰p”š’PŒê‚ÉƒtƒH[ƒ}ƒbƒg‚·‚é
+# è‹±æ•°å­—å˜èªã«ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã™ã‚‹
 #********************************************
 sub formatToNumberAlphabet {
     my $str = shift;
@@ -213,7 +240,7 @@ sub formatToNumberAlphabet {
 
 
 #********************************************
-# “ú•tŠÔ‚ÌƒZƒpƒŒ[ƒ^‚Æ’·‚³‚ğ®‚¦‚é
+# æ—¥ä»˜æ™‚é–“ã®ã‚»ãƒ‘ãƒ¬ãƒ¼ã‚¿ã¨é•·ã•ã‚’æ•´ãˆã‚‹
 # @param strings
 # @param hash    {sepfrom =>'', septo=>'', offset=>"", limit=>""}
 #********************************************
@@ -227,7 +254,7 @@ sub formatDateTimeSeparator {
 
 
 #******************************************************
-# @desc     yyyyy mm dd HH MM ‚ÌŠÔƒf[ƒ^‚ğyyyy-mm-dd HH:MM‚É‚·‚é
+# @desc     yyyyy mm dd HH MM ã®æ™‚é–“ãƒ‡ãƒ¼ã‚¿ã‚’yyyy-mm-dd HH:MMã«ã™ã‚‹
 # @param    string { yyyy=>"" mm=>"", dd=>"", HH=>", MM=>"" join1=>"" join2=>"" withspace=>[1,0]}
 #******************************************************
 sub joinDateTime {
@@ -242,8 +269,73 @@ sub joinDateTime {
 }
 
 
+#******************************************************
+# @desc     DateTimeBã‹ã‚‰DateTimeAã‚’å¼•ãç®—ã—ãŸçµæœã‚’è¿”ã™
+# @desc     å¹´ã¯å¿…é ˆã€‚è©³ç´°ãŒã‚ã‚Œã°å¼•ãç®—ã®å¯¾è±¡ã¨ãªã‚‹
+# @param   hashobj
+#           {
+#               DateTimeA => {
+#                   sec  =>  6
+#                   min  =>  7
+#                   hour =>  8
+#                   day  =>  9
+#                   mon  => 10   - 1
+#                   year => 2004 - 1900 # ã“ã‚Œã¯å¿…é ˆ
+#                   wday => 0
+#                   yday => 0
+#               },
+#               DateTimeB => {
+#                   sec  =>  6
+#                   min  =>  7
+#                   hour =>  8
+#                   day  =>  9
+#                   mon  => 10   - 1
+#                   year => 2004 - 1900 # ã“ã‚Œã¯å¿…é ˆ
+#                   wday => 0
+#                   yday => 0
+#               },
+#           }
+# @return  time difference
+#******************************************************
+sub subtractDateTimeAFromDateTimeB {
+    my $datetimeref = shift || return undef;
+
+    # default ã®æ™‚é–“
+    my $datetime_def = {
+            DateTimeA => {
+                sec  =>  6,
+                min  =>  7,
+                hour =>  8,
+                day  =>  9,
+                mon  => (10   - 1),
+                year => (2004 - 1900),
+                wday => 0,
+                yday => 0,
+            },
+            DateTimeB => {
+                sec  =>  6,
+                min  =>  7,
+                hour =>  8,
+                day  =>  9,
+                mon  => (10   - 1),
+                year => (2004 - 1900),
+                wday => 0,
+                yday => 0,
+            },
+       };
+
+    map { $datetime_def->{DateTimeA}->{$_} = $datetimeref->{DateTimeA}->{$_} } keys %{ $datetimeref->{DateTimeA} };
+    map { $datetime_def->{DateTimeB}->{$_} = $datetimeref->{DateTimeB}->{$_} } keys %{ $datetimeref->{DateTimeB} };
+
+    my $unixtimeA = mktime($datetime_def->{DateTimeA}->{sec}, $datetime_def->{DateTimeA}->{min}, $datetime_def->{DateTimeA}->{hour}, $datetime_def->{DateTimeA}->{day}, ($datetime_def->{DateTimeA}->{mon} - 1), ($datetime_def->{DateTimeA}->{year} - 1900), $datetime_def->{DateTimeA}->{wday}, $datetime_def->{DateTimeA}->{wday});
+    my $unixtimeB = mktime($datetime_def->{DateTimeB}->{sec}, $datetime_def->{DateTimeB}->{min}, $datetime_def->{DateTimeB}->{hour}, $datetime_def->{DateTimeB}->{day}, ($datetime_def->{DateTimeB}->{mon} - 1), ($datetime_def->{DateTimeB}->{year} - 1900), $datetime_def->{DateTimeB}->{wday}, $datetime_def->{DateTimeB}->{wday});
+
+    return ($unixtimeB - $unixtimeA);
+}
+
+
 #********************************************
-# ç’PˆÊ‚ÉƒJƒ“ƒ}‚ğ‘}“ü
+# åƒå˜ä½ã«ã‚«ãƒ³ãƒã‚’æŒ¿å…¥
 #********************************************
 sub insertComma {
     my $int = shift;
@@ -254,7 +346,7 @@ sub insertComma {
 
 
 #********************************************
-# ¬”“_‚ğo‚·
+# å°æ•°ç‚¹ã‚’å‡ºã™
 #********************************************
 sub Round {
   my ($num, $decimals) = @_;
@@ -267,7 +359,7 @@ sub Round {
 
 
 #********************************************
-# ƒƒ‹ƒAƒhƒ`ƒFƒbƒN
+# ãƒ¡ãƒ«ã‚¢ãƒ‰ãƒã‚§ãƒƒã‚¯
 #********************************************
 sub Looks_Like_Email {
     my $str = shift;
@@ -279,7 +371,7 @@ sub Looks_Like_Email {
 
 
 #********************************************
-# URLƒ`ƒFƒbƒN –¢ƒ`ƒFƒbƒN
+# URLãƒã‚§ãƒƒã‚¯ æœªãƒã‚§ãƒƒã‚¯
 #********************************************
 sub checkURL {
     my $str = shift;
@@ -290,7 +382,7 @@ sub checkURL {
 
 
 #********************************************
-# ‘SŠp‚©‚È‚ğ”¼Šp‚©‚È•ÏŠ·
+# å…¨è§’ã‹ãªã‚’åŠè§’ã‹ãªå¤‰æ›
 #********************************************
 sub mbconvertZ2HKana {
     my $str = shift;
@@ -302,7 +394,7 @@ sub mbconvertZ2HKana {
 
 
 #********************************************
-# ”¼Šp‚©‚È‚ğ‘SŠp‚©‚È•ÏŠ·
+# åŠè§’ã‹ãªã‚’å…¨è§’ã‹ãªå¤‰æ›
 #********************************************
 sub mbconvertH2ZKana {
     my $str = shift;
@@ -314,7 +406,7 @@ sub mbconvertH2ZKana {
 
 
 #********************************************
-# ‘S‚Ä”¼Šp•ÏŠ·
+# å…¨ã¦åŠè§’å¤‰æ›
 #********************************************
 sub mbconvertZ2H {
     my $str = shift;
@@ -326,7 +418,7 @@ sub mbconvertZ2H {
 
 
 #********************************************
-# ‘S‚Ä‘SŠp•ÏŠ·
+# å…¨ã¦å…¨è§’å¤‰æ›
 #********************************************
 sub mbconvertH2Z {
     my $str = shift;
@@ -338,7 +430,7 @@ sub mbconvertH2Z {
 
 
 #********************************************
-# utf-8‚ğsjis‚É•ÏŠ·
+# utf-8ã‚’sjisã«å¤‰æ›
 #********************************************
 sub mbconvertU2S {
     my $str = shift;
@@ -347,7 +439,7 @@ sub mbconvertU2S {
 
 
 #********************************************
-# sjis‚ğutf-8‚É•ÏŠ·
+# sjisã‚’utf-8ã«å¤‰æ›
 #********************************************
 sub mbconvertS2U {
     my $str = shift;
@@ -356,7 +448,7 @@ sub mbconvertS2U {
 
 
 #********************************************
-# sjis‘SŠpƒXƒy[ƒX‚ğ”¼ŠpƒJƒ“ƒ}‚É•ÏŠ·
+# sjiså…¨è§’ã‚¹ãƒšãƒ¼ã‚¹ã‚’åŠè§’ã‚«ãƒ³ãƒã«å¤‰æ›
 #********************************************
 sub convertSZSpace2C {
     my $str = shift;
@@ -368,7 +460,7 @@ sub convertSZSpace2C {
 
 
 #********************************************
-# “ú–{Œê•¶š—ñ‚ğ16i”•ÏŠ·
+# æ—¥æœ¬èªæ–‡å­—åˆ—ã‚’16é€²æ•°å¤‰æ›
 #********************************************
 sub convertMBStrings2Hex {
     my $str = shift || return (undef);
@@ -381,7 +473,7 @@ sub convertMBStrings2Hex {
 
 
 #********************************************
-# 16i”‚ğ“ú–{Œê•¶š—ñ•ÏŠ·
+# 16é€²æ•°ã‚’æ—¥æœ¬èªæ–‡å­—åˆ—å¤‰æ›
 #********************************************
 sub convertHex2MBStrings {
     my $hex = shift || return (undef);
@@ -392,8 +484,9 @@ sub convertHex2MBStrings {
     return ($hex);
 }
 
+
 #******************************************************
-# @desc     NKF‚ğg—p‚µ‚Ä‚Ì’Pƒ‚È•¶šƒR[ƒh•ÏŠ·o—Í
+# @desc     NKFã‚’ä½¿ç”¨ã—ã¦ã®å˜ç´”ãªæ–‡å­—ã‚³ãƒ¼ãƒ‰å¤‰æ›å‡ºåŠ›
 # @param    flag -j,-s,-e,-w
 # @param    str
 # @return   str
@@ -402,11 +495,59 @@ sub convertByNKF($$) {
     my ($flag, $str) = @_;
     return undef if $flag !~ /^-[j|s|e|w]$/;
 
-    return ( nkf($flag, $str) );
+    # Modified 2010/10/27 é…åˆ—ã«å¯¾å¿œ
+    return ( wantarray ? map { nkf($flag, $_) } @{ $str } : nkf($flag, $str) );
 }
 
+
+#******************************************************
+# @desc     sjisæ–‡å­—ã§åŠè§’è‹±æ•°,ã²ã‚‰ãŒãªã€ã‚«ã‚¿ã‚«ãƒŠã ã‘OKâ†’æ¼¢å­—ã¯NGåˆ¤å®š
+# @param    str
+# @return   str boolean
+#******************************************************
+sub mbcheckSZkanji {
+    my $str = shift;
+
+    my $Hspace                = '[\x20]';                                       # åŠè§’ã‚¹ãƒšãƒ¼ã‚¹
+    my $Zspace_sjis           = '[\x81\x40]';                                   # sjis å…¨è§’ã‚¹ãƒšãƒ¼ã‚¹
+
+    my $oneByte_sjis          = '[\x00-\x7F\xA1-\xDF]';                         # sjis 1ãƒã‚¤ãƒˆ
+    my $twoByte_sjis          = '(?:[\x81-\x9F\xE0-\xFC][\x40-\x7E\x80-\xFC])'; # sjis 2ãƒã‚¤ãƒˆ
+    my $sjis                  = '(?:$oneByte_sjis|$twoBytes_sjis)';             # sjis ã‚­ãƒ£ãƒ©ã‚¯ã‚¿
+=pod
+    my $ZNumber_sjis          = '(?:\x82[\x4F-\x58])'                           # sjis å…¨è§’æ•°å­—
+    my $ZCapitalalphabet_sjis = '(?:\x82[\x60-\x79])';                          # sjis å…¨è§’å¤§æ–‡å­— [ï¼¡-ï¼º]
+    my $ZSmallalphabet_sjis   = '(?:\x82[\x81-\x9A])';                          # sjis å…¨è§’å°æ–‡å­— [ï½-ï½š]
+    my $Zalphabet_sjis        = '(?:\x82[\x60-\x79\x81-\x9A])';                 # sjis å…¨è§’ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆ [ï¼¡-ï¼ºï½-ï½š]
+    my $Zhiragana_sjis        = '(?:\x82[\x9F-\xF1])';                          # sjis å…¨è§’å¹³ä»®å [ã-ã‚“]
+    my $Zhiragana_ext_sjis    = '(?:\x82[\x9F-\xF1]|\x81[\x4A\x4B\x54\x55])';   # sjis å…¨è§’å¹³ä»®åæ‹¡å¼µ [ã-ã‚“ã‚›ã‚œã‚ã‚]
+    my $Zkatakana_sjis        = '(?:\x83[\x40-\x96])';                          # sjis å…¨è§’ã‚«ã‚¿ã‚«ãƒŠ [ã‚¡-ãƒ¶]
+    my $Zkatakana_ext_sjis    = '(?:\x83[\x40-\x96]|\x81[\x45\x5B\x52\x53])';   # sjis å…¨è§’ã‚«ã‚¿ã‚«ãƒŠæ‹¡å¼µ [ã‚¡-ãƒ¶ãƒ»ãƒ¼ãƒ½ãƒ¾]
+    my $Hkatakana_sjis        = '[\xA6-\xDF]';                                  # sjis åŠè§’ã‚«ã‚¿ã‚«ãƒŠ
+=cut
+    my $ZNumber_sjis          = '[\x82][\x4F-\x58]';                            # sjis å…¨è§’æ•°å­—
+    my $ZCapitalalphabet_sjis = '[\x82][\x60-\x79]';                            # sjis å…¨è§’å¤§æ–‡å­— [ï¼¡-ï¼º]
+    my $ZSmallalphabet_sjis   = '[\x82][\x81-\x9A]';                            # sjis å…¨è§’å°æ–‡å­— [ï½-ï½š]
+    my $Zalphabet_sjis        = '[\x82][\x60-\x79\x81-\x9A]';                   # sjis å…¨è§’ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆ [ï¼¡-ï¼ºï½-ï½š]
+    my $Zhiragana_sjis        = '[\x82][\x9F-\xF1]';                            # sjis å…¨è§’å¹³ä»®å [ã-ã‚“]
+    my $Zhiragana_ext_sjis    = '(?:[\x82][\x9F-\xF1]|\x81[\x4A\x4B\x54\x55])'; # sjis å…¨è§’å¹³ä»®åæ‹¡å¼µ [ã-ã‚“ã‚›ã‚œã‚ã‚]
+    my $Zkatakana_sjis        = '[\x83][\x40-\x96]';                            # sjis å…¨è§’ã‚«ã‚¿ã‚«ãƒŠ [ã‚¡-ãƒ¶]
+    my $Zkatakana_ext_sjis    = '[\x83][\x40-\x96]|\x81[\x45\x5B\x52\x53]';     # sjis å…¨è§’ã‚«ã‚¿ã‚«ãƒŠæ‹¡å¼µ [ã‚¡-ãƒ¶ãƒ»ãƒ¼ãƒ½ãƒ¾]
+    my $Hkatakana_sjis        = '[\xA6-\xDF]';                                  # sjis åŠè§’ã‚«ã‚¿ã‚«ãƒŠ
+
+   ## åŠè§’ã‚¹ãƒšãƒ¼ã‚¹ å…¨è§’ã®ã‚¹ãƒšãƒ¼ã‚¹  å…¨è§’å¤§æ–‡å­—å°æ–‡å­—ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆ å…¨è§’æ•°å­—
+    my $RegExHspaceZspace              = qr/(?:$Hspace|$Zspace_sjis|$ZNumber_sjis|$Zalphabet_sjis)/;
+
+    my $RegExSZhiraganakatakanaonebyte = qr/\G$sjis*?(?:$oneByte_sjis|$Zhiragana_sjis|$Zkatakana_sjis)/;
+
+    return -1 if $str =~ /$RegExHspaceZspace/go;
+    return -1 if $str !~ /$RegExSZhiraganakatakanaonebyte/go;
+    return 1;
+}
+
+
 #********************************************
-# •¶š—ñ‚ğMD5‚ÅƒGƒ“ƒR[ƒh
+# æ–‡å­—åˆ—ã‚’MD5ã§ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‰
 #********************************************
 sub encodeMD5 {
     my @val = @_;
@@ -426,7 +567,7 @@ sub encodeMD5 {
 
 
 #********************************************
-# •¶š—ñ‚ğMD5‚ÅƒfƒR[ƒh
+# æ–‡å­—åˆ—ã‚’MD5ã§ãƒ‡ã‚³ãƒ¼ãƒ‰
 #********************************************
 sub decodeMD5 {
     my $ciphertext = shift;
@@ -450,7 +591,7 @@ sub decodeMD5 {
 
 
 #********************************************
-# BlowFish‚ÅˆÃ†‰»
+# BlowFishã§æš—å·åŒ–
 #********************************************
 sub encryptBlowFish {
     my @val = @_;
@@ -463,7 +604,7 @@ sub encryptBlowFish {
 }
 
 #********************************************
-# # BlowFish‚Å•¡‡‰»
+# # BlowFishã§è¤‡åˆåŒ–
 #********************************************
 sub decryptBlowFish {
     my $ciphertext = shift;
@@ -474,6 +615,71 @@ sub decryptBlowFish {
 
     my @val = split(/:/, $cipher->decrypt_hex($ciphertext));
     return (@val);
+}
+
+
+#********************************************
+# @desc     crypté–¢æ•°ã§æš—å·åŒ–ã—ãŸã„æ–‡å­—åˆ—($val)ã‚’å—ã‘å–ã‚Šã€æš—å·åŒ–ã—ãŸæ–‡å­—åˆ—ã‚’è¿”ã™
+# @param    string, string
+#           
+# @return   crypted string
+#********************************************
+sub cipher {
+    my ($val) = @_;
+
+    my( $sec, $min, $hour, $day, $mon, $year, $weekday )
+                 = localtime( time );
+    my( @token ) = ( '0'..'9', 'A'..'Z', 'a'..'z' );
+    my $salt     = $token[(time | $$) % scalar(@token)];
+    $salt       .= $token[($sec + $min*60 + $hour*60*60) % scalar(@token)];
+
+    return crypt( $val, $salt );
+}
+
+
+#********************************************
+# @desc     æ–‡å­—åˆ—ã¨crypté–¢æ•°ã§æš—å·åŒ–ã—ãŸæ–‡å­—åˆ—ã‹ã‚‰ä¸€è‡´ã™ã‚‹ã‹åˆ¤å®š
+# @param    string,encrypted string
+#           
+# @return   boolean
+#********************************************
+sub decipher {
+    my ($passwd1, $passwd2) = @_;
+
+    # æš—å·ã®ãƒã‚§ãƒƒã‚¯
+    if ( crypt($passwd1, $passwd2) eq $passwd2 ) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+
+#******************************************************
+# @desc        MD5ã§å¼•æ•°ã‚’è¨ˆç®—ã—ã¦å¼•æ•°ã§æŒ‡å®šã—ãŸé•·ã•ã«ã™ã‚‹
+# @param    $value = MD5ã§è¨ˆç®—ã™ã‚‹å€¤
+#            $length = æŒ‡å®šé•·ã•
+# @return    
+#******************************************************
+sub createHash {
+    my ($value, $length) = @_;
+
+    require Digest::MD5;
+    my $md = Digest::MD5->new();
+    $md->add($value);
+    return substr($md->hexdigest, 0, $length);
+}
+
+
+#******************************************************
+# @desc        ãƒ¦ãƒ¼ã‚¶ãƒ¼ã«ãƒ¦ãƒ‹ãƒ¼ã‚¯IDã‚’ç™ºè¡Œã™ã‚‹
+# @return    UniqueNumber
+#******************************************************
+sub generateOrderID {
+    $ENV{'TZ'} = "Japan";
+    my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
+    my $orderid = sprintf("%04d%02d%02d%02d%02d%02d",$year +1900,$mon +1,$mday,$hour,$min,$sec);
+    return ($orderid);
 }
 
 
@@ -498,13 +704,13 @@ sub getIP_Host {
 }
 
 #////////////////////////////////////////////
-# ‚»‚Ì‘¼
+# ãã®ä»–
 #////////////////////////////////////////////
 
 
 #********************************************
-# @access        public 1975”N9Œ25“ú1539•ª5•b
-# @param        int        $WhereStr        ƒtƒH[ƒ}ƒbƒg‚ğw’è
+# @access        public 1975å¹´9æœˆ25æ—¥15æ™‚39åˆ†5ç§’
+# @param        int        $WhereStr        ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã‚’æŒ‡å®š
 #                0  yyyy-mm-dd hh:mm   1975-09-25 15:39
 #                1  yyyy-mm-dd         1975-09-25
 #                2  yyyymmdd           19750925
@@ -513,7 +719,7 @@ sub getIP_Host {
 #                5  yyyymm             197509
 #                6  yyyy-mm            1975-09
 #                7  yyyymmddhhmmss     19750925153905
-#                8  mmŒ               09Œ
+#                8  mmæœˆ               09æœˆ
 #                9  yyyy               1975
 #                10                    1975-09-05 15:39:09
 #                11                    09
@@ -523,7 +729,7 @@ sub getIP_Host {
 #                15                    15
 #                16                    39
 #                17                    09
-# @return        w’èƒtƒH[ƒ}ƒbƒg‚ÅŒ»İ‚ÌŠÔ
+# @return        æŒ‡å®šãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã§ç¾åœ¨ã®æ™‚é–“
 #********************************************
 sub GetTime {
     #my $opt = shift;
@@ -538,7 +744,7 @@ sub GetTime {
         "%Y%m",
         "%Y-%m",
         "%Y%m%d%H%M%S",
-        "%mŒ%d" . $additional . "“ú",
+        "%mæœˆ%d" . $additional . "æ—¥",
         "%Y",
         "%Y-%m-%d %H:%M:%S",
         "%m",
@@ -556,8 +762,8 @@ sub GetTime {
 
 
 #******************************************************
-# @desc        ¶”NŒ“ú‚©‚ç”N—î‚ğŒvZ
-# @param    1975-09-23‚ÌƒtƒH[ƒ}ƒbƒg
+# @desc        ç”Ÿå¹´æœˆæ—¥ã‹ã‚‰å¹´é½¢ã‚’è¨ˆç®—
+# @param    1975-09-23ã®ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆ
 # @return    $age
 #******************************************************
 sub calculateAge {
@@ -578,14 +784,14 @@ sub calculateAge {
     my $age = (GetTime("9") - $Y);
     if ( (GetTime("11") * 100 + GetTime("12") ) < ($m * 100 + $d)) { --$age; }
 
-    ## ”N—î‚ÌãŒÀ’l‚Æ100Î‚ğİ’è
+    ## å¹´é½¢ã®ä¸Šé™å€¤ã¨100æ­³ã‚’è¨­å®š
     return (1 < $age && $age < 100) ? $age : undef;
 #    return (1 < $age)  ? $age : undef;
 }
 
 
 #********************************************
-# ŠÔ‘ª’è
+# æ™‚é–“æ¸¬å®š
 #********************************************
 sub benchmarkMicrotime {
     my ($opt, $microtime) = @_;
@@ -605,36 +811,7 @@ sub getCookies {
 
 
 #******************************************************
-# @desc        MD5‚Åˆø”‚ğŒvZ‚µ‚Äˆø”‚Åw’è‚µ‚½’·‚³‚É‚·‚é
-# @param    $value = MD5‚ÅŒvZ‚·‚é’l
-#            $length = w’è’·‚³
-# @return    
-#******************************************************
-sub createHash {
-    my ($value, $length) = @_;
-
-    require Digest::MD5;
-    my $md = Digest::MD5->new();
-    $md->add($value);
-    return substr($md->hexdigest, 0, $length);
-}
-
-
-#******************************************************
-# @desc        ƒ†[ƒU[‚Éƒ†ƒj[ƒNID‚ğ”­s‚·‚é
-# @return    UniqueNumber
-#******************************************************
-sub generateOrderID {
-    $ENV{'TZ'} = "Japan";
-    my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
-    my $orderid = sprintf("%04d%02d%02d%02d%02d%02d",$year +1900,$mon +1,$mday,$hour,$min,$sec);
-    return ($orderid);
-}
-
-
-
-#******************************************************
-# @desc        Šg’£q‚©‚çƒtƒ@ƒCƒ‹ƒ^ƒCƒv‚ğæ“¾‚·‚éEƒRƒ“ƒeƒ“ƒcƒ^ƒCƒv‚©‚çŠg’£q‚ğæ“¾
+# @desc        æ‹¡å¼µå­ã‹ã‚‰ãƒ•ã‚¡ã‚¤ãƒ«ã‚¿ã‚¤ãƒ—ã‚’å–å¾—ã™ã‚‹ãƒ»ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚¿ã‚¤ãƒ—ã‹ã‚‰æ‹¡å¼µå­ã‚’å–å¾—
 # @param    $path/to/$file
 # @return    
 #******************************************************
@@ -642,8 +819,8 @@ sub figContentType {
     my $filename = shift || return undef;
 
     #*********************************
-    # ƒtƒ@ƒCƒ‹Šg’£q‚ÆƒRƒ“ƒeƒ“ƒcƒ^ƒCƒv
-    # Modified AU/DoCoMo/SoftBankƒfƒRƒƒeƒ“ƒvƒŒ[ƒg—p’Ç‰Á2009/04/28
+    # ãƒ•ã‚¡ã‚¤ãƒ«æ‹¡å¼µå­ã¨ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚¿ã‚¤ãƒ—
+    # Modified AU/DoCoMo/SoftBankãƒ‡ã‚³ãƒ¡ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨è¿½åŠ 2009/04/28
     #*********************************
     my %CONTENT_TYPE = (
         "jpg"  => "image/jpeg",
@@ -674,7 +851,7 @@ sub figContentType {
     return ($CONTENT_TYPE{$1}) if $filename =~ /\.([^.]+)$/;
 
     #*********************************
-    # ƒRƒ“ƒeƒ“ƒcƒ^ƒCƒv‚Æƒtƒ@ƒCƒ‹Šg’£q
+    # ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚¿ã‚¤ãƒ—ã¨ãƒ•ã‚¡ã‚¤ãƒ«æ‹¡å¼µå­
     #*********************************
 =pod
     my %CONTENT_TYPE_2 = (
@@ -702,7 +879,7 @@ sub figContentType {
 
 
 #******************************************************
-# @desc        w’èƒtƒ@ƒCƒ‹‚ğƒI[ƒvƒ“‚µ‚Ä“à—e‚ğ•Ô‚·
+# @desc        æŒ‡å®šãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚ªãƒ¼ãƒ—ãƒ³ã—ã¦å†…å®¹ã‚’è¿”ã™
 # @param    $path/to/$file
 # @return    
 #******************************************************
@@ -724,9 +901,9 @@ sub openFileIntoScalar {
 
 
 #******************************************************
-# @desc        ƒfƒBƒŒƒNƒgƒŠì¬
+# @desc        ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªä½œæˆ
 # @param    str        $path_to_directory
-# @return    boolean (¸”s‚Ìê‡‚ªƒGƒ‰[‚ğo—Í‚·‚é‚©‚ç©•ª‚Åƒ`ƒFƒbƒN)
+# @return    boolean (å¤±æ•—ã®å ´åˆãŒã‚¨ãƒ©ãƒ¼ã‚’å‡ºåŠ›ã™ã‚‹ã‹ã‚‰è‡ªåˆ†ã§ãƒã‚§ãƒƒã‚¯)
 #******************************************************
 sub createDir {
     my $directory_path = shift || return undef;
@@ -747,7 +924,7 @@ sub createDir {
 
 
 #******************************************************
-# @desc        ƒVƒŠƒAƒ‰ƒCƒY‚µ‚Ä•Û‘¶
+# @desc        ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚ºã—ã¦ä¿å­˜
 # @param    hashobj {file=> path/to/filenem obj=>{}}
 #            store if hashobj->{obj} exists or retrieve by file
 # @return    
@@ -760,7 +937,7 @@ sub publishObj {
 
 
 #******************************************************
-# @desc        ƒVƒŠƒAƒ‰ƒCƒYƒIƒuƒWƒFƒNƒg‚ğíœ
+# @desc        ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚ºã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å‰Šé™¤
 #******************************************************
 sub clearObj {
     my $obj = shift || return undef;
@@ -769,7 +946,7 @@ sub clearObj {
 
 
 #******************************************************
-# @desc        Cached::Memcached‚ğ—˜—p‚µ‚½ƒIƒuƒWƒFƒNƒg‚ğæ“¾
+# @desc        Cached::Memcachedã‚’åˆ©ç”¨ã—ãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—
 # @param    $key $value
 # @return    $object
 #******************************************************
@@ -787,7 +964,7 @@ sub getCachedByCGI {
 
 
 #******************************************************
-# @desc     ƒfƒoƒbƒO—p‚ÉWarn‚ÌƒƒbƒZ[ƒW‚ğo—Í
+# @desc     ãƒ‡ãƒãƒƒã‚°ç”¨ã«Warnã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡ºåŠ›
 # @param    $str
 # @return    
 #******************************************************
@@ -802,7 +979,7 @@ sub warnMSG_LINE {
 
 
 #******************************************************
-# @desc        ƒfƒoƒbƒO—p‚ÉWarn‚ÌƒƒbƒZ[ƒW‚ğWEBo—Í—p‚É
+# @desc        ãƒ‡ãƒãƒƒã‚°ç”¨ã«Warnã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’WEBå‡ºåŠ›ç”¨ã«
 # @param    $str
 # @return    $str dump strings
 #******************************************************
@@ -818,7 +995,7 @@ sub warnMSGtoBrowser {
 
 
 #******************************************************
-# @desc        ƒfƒoƒbƒO—p‚É–Ø\‘¢‚Ìƒf[ƒ^‚ğo—Í
+# @desc        ãƒ‡ãƒãƒƒã‚°ç”¨ã«æœ¨æ§‹é€ ã®ãƒ‡ãƒ¼ã‚¿ã‚’å‡ºåŠ›
 # @param    $str layout printflag
 # @return    
 #******************************************************
