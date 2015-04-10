@@ -198,7 +198,7 @@ $COUNTER++;
 	my $tmpltdir		= $pwd . '/tmplt';
 	my $dlcontentsdir	= $pwd . '/dl_contents';
 	my $tmpdir			= $pwd . '/tmp';
-	my $modulerdir		= $pwd . '/modules';
+	my $modulesdir		= $pwd . '/modules';
 	my $publisdir		= $pwd . '/publish';
 	my $categorylistobj = $publisdir . '/sitecommon/subcategorylist.obj';
 	my $top10rankingobj = $publisdir . '/rank/Top10Ranking.obj';
