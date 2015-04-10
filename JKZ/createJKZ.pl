@@ -2,10 +2,10 @@
 
 #******************************************************
 # @desc		Creates JKZ Framework
-#			‘Î˜bƒo[ƒWƒ‡ƒ“
-#			ƒTƒCƒg\¬ƒfƒBƒŒƒNƒgƒŠ‚ğ¶¬‚µ‚ÄAİ’èƒtƒ@ƒCƒ‹enfconf.cfg‚ğİ’uB
-#			‚Ü‚½ƒTƒCƒg—p‚ÆŠÇ——p‚ÌƒRƒ“ƒgƒ[ƒ‰[‚Ì¶¬‚ÆƒCƒ“ƒNƒ‹[ƒhƒpƒX
-#			enfconf.cfg‚Í‰º‹Lƒf[ƒ^‚ğİ’è‚·‚éB
+#			å¯¾è©±ãƒãƒ¼ã‚¸ãƒ§ãƒ³
+#			ã‚µã‚¤ãƒˆæ§‹æˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ç”Ÿæˆã—ã¦ã€è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«enfconf.cfgã‚’è¨­ç½®ã€‚
+#			ã¾ãŸã‚µã‚¤ãƒˆç”¨ã¨ç®¡ç†ç”¨ã®ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ãƒ¼ã®ç”Ÿæˆã¨ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ãƒ‘ã‚¹
+#			enfconf.cfgã¯ä¸‹è¨˜ãƒ‡ãƒ¼ã‚¿ã‚’è¨­å®šã™ã‚‹ã€‚
 #			FRAMEWORK_BASE_D
 #			MAIN_URL		
 #			CMS_URL			
@@ -23,14 +23,14 @@
 # @author	Iwahase Ryo
 # @create	2009/01/22
 # @update	2009/02/18
-# @update	2009/02/27	UI‚Ìhtdocs/mod-perl/ perl-cgi‚ÆƒvƒƒOƒ‰ƒ€‚»‚Ì‘¼‚ÌƒfƒBƒŒƒNƒgƒŠƒtƒ@ƒCƒ‹‚Ì©“®İ’u‚ğ’Ç‰Á
-# @update	2009/02/27	CMS‚Ìhtdocs/mod-perl/ css js image A‚ÆƒvƒƒOƒ‰ƒ€‚»‚Ì‘¼‚ÌƒfƒBƒŒƒNƒgƒŠƒtƒ@ƒCƒ‹‚Ì©“®İ’u‚ğ’Ç‰Á
-# @update   2009/03/06	SERIALIZEDOBJDIR DL_CONTENTS_DIR‚ğ’Ç‰Á
-# @update   2009/06/01	•s—v‚È‚à‚Ì‚ğíœTerm::ANSIColor
-# @update   2009/06/04	•K—v‚È’è‹`‚¨‚æ‚Ñ’Ç‰Á–€‚É”º‚¤XV
-# @update	2009/06/30	İ’èƒtƒ@ƒCƒ‹‚É€–Ú’Ç‰Á‚È‚Ç‚É‚æ‚èˆ—’Ç‰Á
-# @update	2009/12/28  İ’èƒtƒ@ƒCƒ‹‚É€–Ú’Ç‰Á‚È‚Ç‚É‚æ‚èˆ—’Ç‰Á
-# @update	2010/03/26  İ’èƒtƒ@ƒCƒ‹‚É€–Ú’Ç‰Á‚È‚Ç‚É‚æ‚èˆ—’Ç‰Á
+# @update	2009/02/27	UIã®htdocs/mod-perl/ perl-cgiã¨ãƒ—ãƒ­ã‚°ãƒ©ãƒ ãã®ä»–ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãƒ•ã‚¡ã‚¤ãƒ«ã®è‡ªå‹•è¨­ç½®ã‚’è¿½åŠ 
+# @update	2009/02/27	CMSã®htdocs/mod-perl/ css js image ã€ã¨ãƒ—ãƒ­ã‚°ãƒ©ãƒ ãã®ä»–ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãƒ•ã‚¡ã‚¤ãƒ«ã®è‡ªå‹•è¨­ç½®ã‚’è¿½åŠ 
+# @update   2009/03/06	SERIALIZEDOBJDIR DL_CONTENTS_DIRã‚’è¿½åŠ 
+# @update   2009/06/01	ä¸è¦ãªã‚‚ã®ã‚’å‰Šé™¤Term::ANSIColor
+# @update   2009/06/04	å¿…è¦ãªå®šç¾©ãŠã‚ˆã³è¿½åŠ äº‹é …ã«ä¼´ã†æ›´æ–°
+# @update	2009/06/30	è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã«é …ç›®è¿½åŠ ãªã©ã«ã‚ˆã‚Šå‡¦ç†è¿½åŠ 
+# @update	2009/12/28  è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã«é …ç›®è¿½åŠ ãªã©ã«ã‚ˆã‚Šå‡¦ç†è¿½åŠ 
+# @update	2010/03/26  è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã«é …ç›®è¿½åŠ ãªã©ã«ã‚ˆã‚Šå‡¦ç†è¿½åŠ 
 # @version	1.2
 #******************************************************
 
@@ -41,12 +41,12 @@ use Cwd;
 use File::Path;
 use Data::Dumper;
 
-## ¶¬‚·‚éƒtƒ@ƒCƒ‹‚Ìƒx[ƒX
-## PLUGINCONF‚ÌƒfƒtƒHƒ‹ƒg‚Í‹óƒtƒ@ƒCƒ‹iƒtƒ@ƒCƒ‹‚ª‘¶İ‚ª•K—v ‹LÚ•û–@‚Ísample.config.yaml‚ğQÆj
+## ç”Ÿæˆã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ™ãƒ¼ã‚¹
+## PLUGINCONFã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯ç©ºãƒ•ã‚¡ã‚¤ãƒ«ï¼ˆãƒ•ã‚¡ã‚¤ãƒ«ãŒå­˜åœ¨ãŒå¿…è¦ è¨˜è¼‰æ–¹æ³•ã¯sample.config.yamlã‚’å‚ç…§ï¼‰
 use constant CONFSKEL                  => './dist/envconf.cfg.dist';
 use constant OFFICIALSITESKEL          => './dist/officalsite.cfg.dist';
-use constant KDDIDEVICENAMELISTSKEL    => './dist/kddi_devicename_list.cfg.dist',
-use constant PLUGINCONFSKEL            => './dist/config.yaml.dist',
+use constant KDDIDEVICENAMELISTSKEL    => './dist/kddi_devicename_list.cfg.dist';
+use constant PLUGINCONFSKEL            => './dist/config.yaml.dist';
 #use constant UICONTROLERSKEL        => './dist/ui_controler.mpl.dist';
 use constant UICONTROLERSKEL           => './dist/run.mpl.dist';
 use constant MEMBERCONTROLERSKEL       => './dist/m_run.mpl.dist';
@@ -67,114 +67,114 @@ my $SUCCESS = 3;
 my $FAIL = 0;
 
 #**********************************************
-# ƒCƒ“ƒXƒg[ƒ‹ŠJn
+# ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«é–‹å§‹
 #**********************************************
 while (1) {
-	print "\n ƒtƒŒ[ƒ€ƒ[ƒN‚Ì\’z‚ğŠJn‚µ‚Ü‚·B\n ŠÂ‹«EƒfƒBƒŒƒNƒgƒŠEƒ‰ƒCƒuƒ‰ƒŠƒpƒX‚Ìİ’èEİ’uEì¬‚ğ‚µ‚Ü‚·B",
-			"\n‚Ü‚½MySQLƒT[ƒo[‚ª‹N“®‚µ‚Ä‚¢‚é‚±‚Æ‚¨‚æ‚ÑAMySQLƒ†[ƒU[‚ªİ’è‚³‚ê‚Ä‚¢‚é‚±‚Æ‚ª‘O’ñ‚Æ‚È‚è‚Ü‚·B\n‚æ‚ë‚µ‚¢‚Å‚·‚©H [y | n] ";
+	print "\n ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®æ§‹ç¯‰ã‚’é–‹å§‹ã—ã¾ã™ã€‚\n ç’°å¢ƒãƒ»ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãƒ»ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãƒ‘ã‚¹ã®è¨­å®šãƒ»è¨­ç½®ãƒ»ä½œæˆã‚’ã—ã¾ã™ã€‚",
+			"\nã¾ãŸMySQLã‚µãƒ¼ãƒãƒ¼ãŒèµ·å‹•ã—ã¦ã„ã‚‹ã“ã¨ãŠã‚ˆã³ã€MySQLãƒ¦ãƒ¼ã‚¶ãƒ¼ãŒè¨­å®šã•ã‚Œã¦ã„ã‚‹ã“ã¨ãŒå‰æã¨ãªã‚Šã¾ã™ã€‚\nã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ [y | n] ";
 	my $choice = <STDIN>;
 	chomp $choice;
 	unless ('y' eq $choice) { last; }
 
-	print "\n •K{€–Ú‚Í", "(Ô•¶š‚Å•\¦)‚³‚ê‚Ü‚·<-‚³‚ê‚È‚¢B\n";
+	print "\n å¿…é ˆé …ç›®ã¯", "(èµ¤æ–‡å­—ã§è¡¨ç¤º)ã•ã‚Œã¾ã™<-ã•ã‚Œãªã„ã€‚\n";
 
 	#***********************************************
-	# ƒTƒCƒgƒhƒƒCƒ“‚ÆŠÇ—‰æ–ÊƒhƒƒCƒ“
+	# ã‚µã‚¤ãƒˆãƒ‰ãƒ¡ã‚¤ãƒ³ã¨ç®¡ç†ç”»é¢ãƒ‰ãƒ¡ã‚¤ãƒ³
 	#***********************************************
 $COUNTER++;
-	print "\n$COUNTER\) ƒTƒCƒg‚ÌƒhƒƒCƒ“–¼‚ğ“ü—Í:";
+	print "\n$COUNTER\) ã‚µã‚¤ãƒˆã®ãƒ‰ãƒ¡ã‚¤ãƒ³åã‚’å…¥åŠ›:";
 	my $DOMAIN = <STDIN>;
 	chomp $DOMAIN;
 	unless ($DOMAIN =~ /[-_\.!\~*'\(\)a-zA-Z0-9\;\/?:@&=\+$,%#]+/) {
-		print "\n ³‚µ‚¢ƒTƒCƒgƒhƒƒCƒ“–¼‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B“ü—Í: ";
+		print "\n æ­£ã—ã„ã‚µã‚¤ãƒˆãƒ‰ãƒ¡ã‚¤ãƒ³åã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚å…¥åŠ›: ";
 	}
 
 $COUNTER++;
-	print "\n$COUNTER\) ŠÇ—‰æ–Ê‚ÌƒhƒƒCƒ“–¼‚ğ“ü—Í(–¢“ü—Í‚Ìê‡‚ÍƒTƒCƒgƒhƒƒCƒ“{admin‚Æ‚È‚è‚Ü‚·): ";
+	print "\n$COUNTER\) ç®¡ç†ç”»é¢ã®ãƒ‰ãƒ¡ã‚¤ãƒ³åã‚’å…¥åŠ›(æœªå…¥åŠ›ã®å ´åˆã¯ã‚µã‚¤ãƒˆãƒ‰ãƒ¡ã‚¤ãƒ³ï¼‹adminã¨ãªã‚Šã¾ã™): ";
 	my $CMSDOMAIN = <STDIN>;
 	chomp $CMSDOMAIN;
 
 	#***********************************************
-	# Àsƒ†[ƒU[FƒOƒ‹[ƒv
+	# å®Ÿè¡Œãƒ¦ãƒ¼ã‚¶ãƒ¼ï¼šã‚°ãƒ«ãƒ¼ãƒ—
 	#***********************************************
 $COUNTER++;
-	print "\n$COUNTER\) Àsƒ†[ƒU[‚Ìw’è‚ª‚ ‚ê‚Î“ü—Í: ";
+	print "\n$COUNTER\) å®Ÿè¡Œãƒ¦ãƒ¼ã‚¶ãƒ¼ã®æŒ‡å®šãŒã‚ã‚Œã°å…¥åŠ›: ";
 	my $USER = <STDIN>;
 	chomp $USER;
 
 $COUNTER++;
-	print "\n$COUNTER\) ÀsƒOƒ‹[ƒv‚Ìw’è‚ª‚ ‚ê‚Î“ü—Í: ";
+	print "\n$COUNTER\) å®Ÿè¡Œã‚°ãƒ«ãƒ¼ãƒ—ã®æŒ‡å®šãŒã‚ã‚Œã°å…¥åŠ›: ";
 	my $GROUP = <STDIN>;
 	chomp $GROUP;
 
 	my $user_group = ($USER and $GROUP) ? $USER . '.' . $GROUP : undef;
 
 	#***********************************************
-	# sendmail‚ÌƒpƒX
+	# sendmailã®ãƒ‘ã‚¹
 	#***********************************************
 	my $sendmail_path = `/usr/bin/which sendmail`;
 	chomp $sendmail_path;
 
 $COUNTER++;
-	print "\n$COUNTER\) sendmail‚ÌƒpƒX‚Í $sendmail_path ‚Å‚æ‚ë‚µ‚¢‚Å‚·‚©? [y | n] ";
+	print "\n$COUNTER\) sendmailã®ãƒ‘ã‚¹ã¯ $sendmail_path ã§ã‚ˆã‚ã—ã„ã§ã™ã‹? [y | n] ";
 	$choice = <STDIN>;
 	chomp $choice;
 	if ('y' ne $choice) {
-		print "\n sendmail‚ÌƒpƒX‚ğ“ü—Í: ";
+		print "\n sendmailã®ãƒ‘ã‚¹ã‚’å…¥åŠ›: ";
 		$sendmail_path = <STDIN>;
 		chomp $sendmail_path;
 	}
 
 $COUNTER++;
-	print "\n$COUNTER\) SMTPƒT[ƒo[–¼‚à‚µ‚­‚ÍIPƒAƒhƒŒƒX‚ğ“ü—Í [localhost]: ";
+	print "\n$COUNTER\) SMTPã‚µãƒ¼ãƒãƒ¼åã‚‚ã—ãã¯IPã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’å…¥åŠ› [localhost]: ";
 	my $smtpserver = <STDIN>;
 	chomp $smtpserver;
 	$smtpserver ||= 'localhost';
 
 
 	#***********************************************
-	# DataBaseŠÖ˜A
+	# DataBaseé–¢é€£
 	#***********************************************
-	print "\n MySQLDataBase‚Ìİ’è‚ğŠJn‚µ‚Ü‚·B";
+	print "\n MySQLDataBaseã®è¨­å®šã‚’é–‹å§‹ã—ã¾ã™ã€‚";
 
 $COUNTER++;
 	my $MySQL = `/usr/bin/which mysql`;
 	chomp $MySQL;
-	print "\n$COUNTER\) MySQLƒvƒƒOƒ‰ƒ€‚Í $MySQL ‚Å‚æ‚ë‚µ‚¢‚Å‚·‚©H[y | n] ";
+	print "\n$COUNTER\) MySQLãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ $MySQL ã§ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ[y | n] ";
 	$choice = <STDIN>;
 	chomp $choice;
 	if ('y' ne $choice) {
-		print "\n sendmail‚ÌƒpƒX‚ğ“ü—Í: ";
+		print "\n sendmailã®ãƒ‘ã‚¹ã‚’å…¥åŠ›: ";
 		$MySQL = <STDIN>;
 		chomp $MySQL;
 	}
 
 
 $COUNTER++;
-	print "\n$COUNTER\) ƒf[ƒ^ƒx[ƒXƒ†[ƒU[–¼‚ğ“ü—Í: ";
+	print "\n$COUNTER\) ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¦ãƒ¼ã‚¶ãƒ¼åã‚’å…¥åŠ›: ";
 	my $databaseuser = <STDIN>;
 	chomp $databaseuser;
 
 $COUNTER++;
-	print "\n$COUNTER\) ƒf[ƒ^ƒx[ƒXƒpƒXƒ[ƒh‚ğ“ü—Í: ";
+	print "\n$COUNTER\) ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å…¥åŠ›: ";
 	my $databasepassword = <STDIN>;
 	chomp $databasepassword;
 
 $COUNTER++;
-	print "\n$COUNTER\) ƒf[ƒ^ƒx[ƒX–¼‚ğ“ü—Í: ";
+	print "\n$COUNTER\) ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹åã‚’å…¥åŠ›: ";
 	my $databasename = <STDIN>;
 	chomp $databasename;
 
 	#***********************************************
-	# Process Check MySQL‚ª‹N“®‚µ‚Ä‚¢‚é‚©
+	# Process Check MySQLãŒèµ·å‹•ã—ã¦ã„ã‚‹ã‹
 	#***********************************************
 	open PS, "/bin/ps -eF |" or die "$!";
 	my @PS = <PS>;
 	close PS;
 	#if (map{ $_ !~ /$MySQL/ } @PS) {
 	if (!grep (/$MySQL/, @PS)) {
-		print "\n MySQLƒT[ƒo[‚ª‹N“®‚µ‚Ä‚Ü‚¹‚ñBƒf[ƒ^ƒx[ƒX‚¨‚æ‚Ñƒe[ƒuƒ‹‚Ì¶¬‚ªo—ˆ‚Ü‚¹‚ñB";
-		print "\n MySQLƒT[ƒo[‚ğ‹N“®‚µ‚ÄAÄ“x‚±‚ÌƒvƒƒOƒ‰ƒ€‚ğÀs‚µ‚Ä‚­‚¾‚³‚¢B";
+		print "\n MySQLã‚µãƒ¼ãƒãƒ¼ãŒèµ·å‹•ã—ã¦ã¾ã›ã‚“ã€‚ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãŠã‚ˆã³ãƒ†ãƒ¼ãƒ–ãƒ«ã®ç”ŸæˆãŒå‡ºæ¥ã¾ã›ã‚“ã€‚";
+		print "\n MySQLã‚µãƒ¼ãƒãƒ¼ã‚’èµ·å‹•ã—ã¦ã€å†åº¦ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚";
 		&take_a_rest();
 		last;
 		
@@ -184,7 +184,7 @@ $COUNTER++;
 	#print "\n", $CMD, "\n";
 
 	#***********************************************
-	# Šm’èî•ñ‚ğ•Ï”‚É‘ã“ü
+	# ç¢ºå®šæƒ…å ±ã‚’å¤‰æ•°ã«ä»£å…¥
 	#***********************************************
 	## URL
 	my $mainurl = 'http://' . $DOMAIN;
@@ -198,14 +198,14 @@ $COUNTER++;
 	my $tmpltdir		= $pwd . '/tmplt';
 	my $dlcontentsdir	= $pwd . '/dl_contents';
 	my $tmpdir			= $pwd . '/tmp';
-	my $modulerdir		= $pwd . '/modules';
+	my $modulesdir		= $pwd . '/modules';
 	my $publisdir		= $pwd . '/publish';
 	my $categorylistobj = $publisdir . '/sitecommon/subcategorylist.obj';
 	my $top10rankingobj = $publisdir . '/rank/Top10Ranking.obj';
 	my $latestcontentsobj = $publisdir . '/newarrival/latestContents.obj';
 
 
-	## ’uŠ·ˆ—
+	## ç½®æ›å‡¦ç†
 	my $CONFIGRATION = {
 		FRAMEWORK_BASE_DIR				=> $pwd,
 		MAIN_URL						=> $mainurl,
@@ -244,15 +244,15 @@ $COUNTER++;
 	};
 
 	#&progress(10);
-	print "\n ‰º‹L“à—e‚ÅƒtƒŒ[ƒ€ƒ[ƒN‚Ì\’z‚ğ‚µ‚Ü‚·B";
+	print "\n ä¸‹è¨˜å†…å®¹ã§ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã®æ§‹ç¯‰ã‚’ã—ã¾ã™ã€‚";
 	print "\n";
-	print "\nÀsƒ†[ƒU[ ", $USER, "\nÀsƒOƒ‹[ƒv ", $GROUP if defined $user_group;
+	print "\nå®Ÿè¡Œãƒ¦ãƒ¼ã‚¶ãƒ¼ ", $USER, "\nå®Ÿè¡Œã‚°ãƒ«ãƒ¼ãƒ— ", $GROUP if defined $user_group;
 	print "\n";
 	print map { $_ . "\t" . $CONFIGRATION->{$_} . "\n" } keys %{$CONFIGRATION};
 
 
 	#***********************************************
-	# ƒfƒBƒŒƒNƒgƒŠì¬ŠJn
+	# ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªä½œæˆé–‹å§‹
 	#***********************************************
 	## Create web directories exit this program if any error occur
 
@@ -266,20 +266,20 @@ $COUNTER++;
 	};
 	if ($@) {
 		print "\n Unable to Create ethier $docroot or $cmsdocroot : $@";
-		print "\n ƒfƒBƒŒƒNƒgƒŠ‚Ìƒp[ƒ~ƒbƒVƒ‡ƒ“AÀsÒ‚Ìƒp[ƒ~ƒbƒVƒ‡ƒ“‚ğŠm”F‚µ‚ÄÄ“xÀs‚µ‚Ä‚­‚¾‚³‚¢B";
-		#print "\n ‚±‚ÌƒvƒƒOƒ‰ƒ€‚ğI—¹‚µ‚Ü‚·B";
+		print "\n ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®ãƒ‘ãƒ¼ãƒŸãƒƒã‚·ãƒ§ãƒ³ã€å®Ÿè¡Œè€…ã®ãƒ‘ãƒ¼ãƒŸãƒƒã‚·ãƒ§ãƒ³ã‚’ç¢ºèªã—ã¦å†åº¦å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚";
+		#print "\n ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’çµ‚äº†ã—ã¾ã™ã€‚";
 	
 		$FAIL++;
 	}
 
 	#***********************************************
-	# Àsƒ†[ƒU[FƒOƒ‹[ƒv‚Ì•ÏX
+	# å®Ÿè¡Œãƒ¦ãƒ¼ã‚¶ãƒ¼ï¼šã‚°ãƒ«ãƒ¼ãƒ—ã®å¤‰æ›´
 	#***********************************************
 	system("/usr/bin/find $base_path -type d -exec chown $user_group {} \\;") if defined $user_group;
 
 	#***********************************************
-	# Šeƒtƒ@ƒCƒ‹AƒvƒƒOƒ‰ƒ€‚ÌŒˆ’è
-	# Šeƒtƒ@ƒCƒ‹‚Ì¶¬ŠJn
+	# å„ãƒ•ã‚¡ã‚¤ãƒ«ã€ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®æ±ºå®š
+	# å„ãƒ•ã‚¡ã‚¤ãƒ«ã®ç”Ÿæˆé–‹å§‹
 	#***********************************************
 	my ($conf, $officialsite, $ui_controler, $cms_controler);
 	$conf			= $confdir . '/envconf.cfg';
@@ -297,7 +297,7 @@ $COUNTER++;
 	foreach my $z (@tmpptr) {
 		print $z->[0],"\n", $z->[1],"\n" if -e $z->[0];
 
-		## ƒx[ƒXƒf[ƒ^‚ğæ“¾‚µAŠÂ‹«‚É‡‚í‚¹‚½ƒf[ƒ^‚É’u‚«Š·‚¦‚é
+		## ãƒ™ãƒ¼ã‚¹ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—ã—ã€ç’°å¢ƒã«åˆã‚ã›ãŸãƒ‡ãƒ¼ã‚¿ã«ç½®ãæ›ãˆã‚‹
 		local $/;
 		local *F;
 		open (F, "<". $z->[0] . "\0") or $FAIL++;
@@ -306,7 +306,7 @@ $COUNTER++;
 
 		$skelton =~ s{ __(.*?)__ }{ exists ($CONFIGRATION->{$1}) ? $CONFIGRATION->{$1} : ""}gex;
 
-		## î•ñ‚ğƒtƒ@ƒCƒ‹‚Éo—Í‚µA‘Î‰ƒfƒBƒŒƒNƒgƒŠ‚Éİ’u
+		## æƒ…å ±ã‚’ãƒ•ã‚¡ã‚¤ãƒ«ã«å‡ºåŠ›ã—ã€å¯¾å¿œãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«è¨­ç½®
 		open (W,">$z->[1]") or $FAIL++;
 		print W $skelton;
 		close (W);
@@ -315,12 +315,12 @@ $COUNTER++;
 	system($MySQLCMD);
 
 	print "\n DONE \n";
-#	print "\n", $FAIL , '/', $SUCCESS, "€–Ú‚ÌÀs‚É¸”s";
+#	print "\n", $FAIL , '/', $SUCCESS, "é …ç›®ã®å®Ÿè¡Œã«å¤±æ•—";
 #	last if 0 < $FAIL;
 
 	#***********************************************
-	# ƒf[ƒ^ƒx[ƒX‚Ìİ’èŠJn
-	# ƒfƒBƒŒƒNƒgƒŠEƒtƒ@ƒCƒ‹¶¬EŠÂ‹«İ’è‚ª¬Œ÷‚Ì‚Æ‚«
+	# ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®è¨­å®šé–‹å§‹
+	# ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãƒ»ãƒ•ã‚¡ã‚¤ãƒ«ç”Ÿæˆãƒ»ç’°å¢ƒè¨­å®šãŒæˆåŠŸã®ã¨ã
 	#***********************************************
 }
 
