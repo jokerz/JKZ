@@ -198,7 +198,7 @@ $COUNTER++;
 	my $tmpltdir		= $pwd . '/tmplt';
 	my $dlcontentsdir	= $pwd . '/dl_contents';
 	my $tmpdir			= $pwd . '/tmp';
-	my $modulesdir		= $pwd . '/modules';
+	my $modulerdir		= $pwd . '/modules';
 	my $publisdir		= $pwd . '/publish';
 	my $categorylistobj = $publisdir . '/sitecommon/subcategorylist.obj';
 	my $top10rankingobj = $publisdir . '/rank/Top10Ranking.obj';
@@ -220,7 +220,7 @@ $COUNTER++;
 		DL_CONTENTS_DIR					=> $dlcontentsdir,
 		SERIALIZEDOBJ_DIR				=> $publisdir,
 		TMP_DIR							=> $tmpdir,
-		MODULE_DIR						=> $modulesdir
+		MODULE_DIR						=> $modulesdir,
 		UI_CONTROLER					=> 'run.mpl',
 		APP_CONTROLER					=> 'app.mpl',
 		SITEIMAGE_SCRIPTDATABASE_NAME	=> '/mod-perl/serveSiteImageDB.mpl',
